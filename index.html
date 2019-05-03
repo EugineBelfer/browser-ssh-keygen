@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>js-keygen</title>
+  <script>module = {};</script>
+  <script src="base64url.js"></script>
+  <script src="ssh-util.js"></script>
+  <script src="js-keygen-ui.js"></script>
+  <script src="js-keygen.js"></script>
+  <link rel="stylesheet" href="js-keygen.css">
+</head>
+
+<body>
+  <div id="content">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" type="text" value="webcrypto">
+    </div>
+    <label for="generate"></label>
+    <button id="generate">Generate</button>
+    <br>
+
+    <div id="result" style="display:none;">
+      <hr>
+      <a id="private" style="display: none;" href="" download="id_rsa">id_rsa</a>
+      <a id="public" style="display: none;" href="" download="id_rsa.pub">id_rsa.pub</a>
+      Private Key
+      <button id="copyPrivate">Copy</button> or
+      <button id="savePrivate">Save</button>
+      <br>
+      <textarea id="privateKey" style="height: 150px;" spellcheck="false"></textarea>
+
+      <hr> Public Key
+      <button id="copyPublic">Copy</button> or
+      <button id="savePublic">Save</button>
+      <br>
+      <textarea id="publicKey" spellcheck="false"></textarea>
+    </div>
+  </div>
+</body>
+
+</html>
